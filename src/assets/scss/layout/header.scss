@@ -1,0 +1,167 @@
+@import '../variables/variables';
+
+section {
+  margin-top: 0;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9;
+  width: 100vw;
+
+  section.header-group {
+    background-color: $second;
+    padding: 0 4rem 0 3rem;
+
+    .navbar-nav {
+      padding-left: 4rem;
+
+      li.nav-item {
+        padding: 0;
+        margin-left: 0.5rem;
+
+        a.nav-link {
+          padding: 1rem .8rem;
+          font-size: 13px;
+          font-weight: 600;
+          color: $pagination-color;
+        }
+      }
+
+      li.nav-item.btn-contact {
+        background-color: $second;
+        box-shadow: $shadow-white;
+        border-radius: 4px;
+
+        a.nav-link {
+          color: $primary;
+          padding: 1rem 1rem;
+          text-transform: uppercase;
+          transition: 0.5s;
+
+          &:hover {
+            color: $white;
+            transition: 0.4s;
+          }
+        }
+
+        &:hover {
+          border-radius: 4px;
+          background: $primary;
+          transition: 0.5s;
+          transform: translateY(-3px)
+        }
+      }
+    }
+  }
+
+  .backto-top {
+    background: $primary;
+    width: fit-content;
+    right: 3rem;
+    bottom: -30rem;
+    width: 3rem;
+    height: 3rem;
+
+    a {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    svg {
+      color: $white;
+    }
+
+    &:hover {
+      background: $white;
+
+      svg {
+        color: $primary;
+      }
+    }
+  }
+
+  .logo img {
+    width: 125px;
+  }
+
+  .active a.nav-link {
+    transition: 0.5s;
+    border-bottom: 1.5px solid $primary;
+  }
+}
+
+
+
+@media only screen and (max-width: 992px) {
+
+  button:not(:disabled),
+  [type=button]:not(:disabled),
+  [type=reset]:not(:disabled),
+  [type=submit]:not(:disabled) {
+    background: white;
+  }
+
+  #header section.header-group .navbar-nav {
+    padding-left: 0rem;
+  }
+
+  #header .top-bar .top-head::after {
+    width: 50%;
+  }
+
+  #header section.header-group .navbar-nav .btn-contact {
+    width: 180px;
+  }
+
+  #header section.header-group .right-menu {
+    display: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #header .top-bar .top-head::after {
+    width: 63%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #header {
+    .top-bar {
+      .top-head {
+        &::after {
+          width: 57%;
+          -webkit-clip-path: polygon(0 0, 92% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 92% 0, 100% 100%, 0% 100%);
+        }
+
+        .info {
+          flex-direction: column;
+          align-items: start !important;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .navbar-light .navbar-toggler {
+    font-size: 90%;
+  }
+
+  #header .logo img {
+    width: 5rem;
+  }
+
+  section.footer-text .container {
+    height: 50%;
+  }
+}

@@ -1,0 +1,88 @@
+@import '../../variables/variables';
+
+//  --  home sesion ---
+.home-page{
+  margin-top: 5rem;
+  height: 90vh;
+  background-image: url("https://inbio-react.netlify.app/static/90be3d1f73e75f5471aa70744b1003bf/ff501/bg-image-4.webp");
+  background-position: center;
+  background-size: cover;  
+  display: flex;
+  align-items: center;
+    h1{
+      font-size: 130px;
+      font-weight:bold;
+      color: #b79685;
+      letter-spacing: 2px;
+      margin-left: 40px;
+    }
+    p{
+      margin-left: 40px;
+      letter-spacing: 5px;
+      color: #b79685;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+  .home-page .text p {
+    font-size: 15px;
+
+  }
+  .home-page .text h1 {
+    font-size: 100px;
+    // background: #000;
+
+  }
+}
+@media only screen and (max-width: 768px) {
+  .home-page .text p {
+    font-size: 13px;
+
+  }
+  .home-page .text h1 {
+    font-size: 80px;
+
+  }
+}
+@media only screen and (max-width: 576px) {
+  .home-page .text p {
+    font-size: 10px;
+    margin-left: 10px;
+
+  }
+  .home-page .text h1 {
+    font-size: 50px;
+    margin-left: 10px;
+
+  }
+  .home-page{
+    height: 75vh;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .slide {
+    .content {
+      width: 90%;
+    }
+  }
+  .home-page{
+    height: 65vh;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .slide .btn-slide {
+    margin-top: 1rem;
+    display: none;
+  }
+  .home-page{
+    height: 55vh;
+  }
+  .home-page .text p {
+    font-size: 10px;
+  }
+  .home-page .text h1 {
+    margin-top: 3rem;
+    font-size: 30px;
+  }
+}

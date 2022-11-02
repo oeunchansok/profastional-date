@@ -1,0 +1,98 @@
+@import '../../variables/variables';
+.block {
+    // background: #f4f5f6;
+    @mixin center {
+        display: flex; 
+        justify-content: center;
+    }
+    .container{
+        @include center;
+        .letter-spac{
+            color: red;
+            letter-spacing: 0.2em;
+        }
+    }
+    .sub-main{
+        justify-content: center;
+        width: 100%;
+        // background: blue;
+        .cards{
+            border-radius: 15px;
+            margin: 13px;
+            width: 29%;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    
+            .title{
+                font-weight: bold;
+                font-size:23px;
+                &:hover{
+                    color: red;   
+                }
+            }
+            .card-img {
+                overflow: hidden;
+                .img-fluid{
+                    transition: 0.5s ease-in-out;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .time{
+                margin-top: 5px;
+                width:20x;
+                height: 1.6vh;
+            }
+            .text-dange{
+                font-size: 12px;
+                color: red;
+                font-weight: bold;
+            }
+            p{
+                font-size: 13px;
+                font-weight: bold;
+            }
+        }
+
+        h4.title {
+            text-align: left;
+            transition: 0.4s;
+            a {
+                color: #1e2125;
+                svg {
+                    transition: .4s;
+                    width: 0;
+                }
+            }
+            &:hover {
+                a {
+                    color: $primary;
+                    svg {
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}  
+@media only screen and (max-width: 992px){
+    .block .sub-main .cards{
+            width:42%;
+            
+    }
+}
+@media only screen and (max-width: 768px){
+    .block .sub-main .cards{
+        width:70%;
+    }
+}
+@media only screen and (max-width: 576px){
+    .block .sub-main .cards{
+        width: 90%;
+    }
+}
+
